@@ -66,3 +66,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.fl{
+  display: flex;
+}
+
+.fl.row{
+  flex-flow: row;
+}
+.fl.column {
+  flex-flow: column;
+}
+.fl .flex1 {
+  flex: 1;
+}
+.full-width {
+  width: 100%;
+}

@@ -1,5 +1,11 @@
-import './Button.scss';
+import React from "react";
 
-export const Button = () => {
-  return <div>Button Component</div>;
+const Button: React.FC = () => {
+  return <div>
+
+  Button Component
+
+  </div>;
 };
+
+export default Button;
