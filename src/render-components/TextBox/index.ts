@@ -1,1 +1,2 @@
-export * from './TextBox';
+import { TextBox} from "./TextBox"; 
+export default TextBox;
