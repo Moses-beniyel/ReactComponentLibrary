@@ -1,1 +1,2 @@
-export * from './Tile';
+import { Tile} from "./Tile"; 
+export default Tile;
