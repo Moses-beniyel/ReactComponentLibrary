@@ -25,11 +25,14 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
-
+#root{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -82,4 +85,7 @@ button:focus-visible {
 }
 .full-width {
   width: 100%;
+}
+.overflow {
+  overflow: auto;
 }
