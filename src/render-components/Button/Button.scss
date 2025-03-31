@@ -1,3 +1,23 @@
-.button {
-  /* Add styles here */
+.btn-grp {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  align-items: flex-start;
+  height: 100%;
+  justify-content: space-between;
+}
+.container{
+  height: 100%;
+}
+.btn-container {
+  display: grid;
+  grid-template-columns: 150px auto; 
+  gap: 20px;
+  width: 100%;
+}
+
+.btn-desc {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
 }

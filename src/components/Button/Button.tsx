@@ -1,11 +1,11 @@
 import React from "react";
-
-const Button: React.FC = () => {
-  return <div>
-
-  Button Component
-
-  </div>;
+import "./Button.scss"
+const Button: React.FC = ({ className = "", type = "", style = {}, hoverStyle=""}) => {
+  return (
+    <>
+        <button className={`btn ${className}`} type={type} style={style}>Button</button>
+    </>
+    );
 };
-
 export default Button;
+ 

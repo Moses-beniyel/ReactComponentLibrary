@@ -147,11 +147,13 @@ const Landing: React.FC = () => {
       <div className="right-panel fl flex1 column">
         <h3>{components[currentPath]?.text}</h3>
         <div className="fl column flex1 overflow">
-        <Routes>
-            {Object.keys(components).map((path) => (
-              <Route key={path} path={path} element={components[path].component} />
-            ))}
-          </Routes>
+          <div className="container">
+            <Routes>
+              {Object.keys(components).map((path) => (
+                <Route key={path} path={path} element={components[path].component} />
+              ))}
+            </Routes>
+          </div>
         </div>
       </div>
     </div>
