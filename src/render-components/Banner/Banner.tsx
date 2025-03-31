@@ -1,6 +1,6 @@
 import './Banner.scss';
 import BannerComponent from '../../components/Banner/Banner';
-import mathew from '../../assets/mathew.jpg';
+import jesus from '../../assets/jesus.jpg';
 
 export const Banner = () => {
   return (
@@ -9,15 +9,22 @@ export const Banner = () => {
       <BannerComponent
       
       
-      title="Welcome"
-      subtitle="Hey! I'm [MATHEW.A],a frontend developer who loves building websites and making them look great. I work with React, Angular, and JavaScript to create smooth and interactive user experiences.
-I’ve worked on projects like e-commerce sites, dashboards, and student management systems, handling everything from UI design to functionality."
-      backgroundImage={mathew}
-      buttonLabel="Contact Us"
-      onButtonClick={() => alert("Button Clicked!")}
+      content={{
+        title: { text: "Don't Be Afraid Just Believe ", color: "#a70404", className: "title-class" },
+        subtitle: { text: "in him was life and that was the life of men.", color: "#0c0000", className: "subtitle-class" },
+        button: { label: "Contact Us", color: "#fff", className: "button-primary" }
+      }}
+      styles={{
+        background: { image: jesus, overlay: true },
+        layout: { fullWidth: true, height: "500px" },
+        className: "custom-banner"
+      }}
+      actions={{
+        onButtonClick: () => alert("Button Clicked!")
+      }}
     />
-    
-
-    </>
+  
+  
+  </>
   )
 };
