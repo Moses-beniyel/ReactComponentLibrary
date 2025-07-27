@@ -1,5 +1,11 @@
+import NavBarComponent from '../../components/Nav';
 import './Nav.scss';
 
 export const Nav = () => {
-  return <div>Nav Component</div>;
+  return(
+    <>
+        <NavBarComponent></NavBarComponent>
+    </>
+  );
+  
 };

@@ -13,14 +13,20 @@
     width: 100vw;
   }
 
+  &.flip {
+    flex-direction: row-reverse;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
   .banner-image {
     flex: 1;
     height: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
-    
-  
   }
 
   .banner-text {
@@ -54,6 +60,9 @@
       &:hover {
         background-color: #0056b3;
       }
+    }
+    .banner-flip{
+      
     }
   }
 }

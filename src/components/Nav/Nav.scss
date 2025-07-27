@@ -1,3 +1,151 @@
 .nav {
-  /* Add styles here */
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center; 
+  background-color: #333; 
+  padding: 10px 0; 
+  color:white;
+  a{
+    color: white;
+  }
+}
+@function contrast-color($color){
+  @if (50>lightness($color)){
+    @return black;
+  }
+  @else{
+    @return white;
+  }
+}
+$colors: (
+  black: black,
+  white: white,
+  gray: gray,
+  silver: silver,
+
+  red: red,
+  maroon: maroon,
+
+  yellow: yellow,
+  gold:rgb(255,215,0),
+
+  blue: blue,
+  navy: navy,
+  skyblue: skyblue,
+
+  green: green,
+  lime: lime,
+  teal: teal,
+
+  purple: purple,
+  violet: violet,
+  orange: orange,
+  brown: brown,
+  pink: pink,
+  cyan: cyan
+);
+
+@each $name,$color in $colors{
+  .nav-#{$name}{
+    background-color: $color;
+    color:contrast-color($color);
+    
+    &:hover{
+      background-color:darken($color, 10%);
+    }
+    
+    &.nav-shadow {
+      color: white;
+      box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.5);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+      &:hover {
+        box-shadow: 0px 6px 12px rgba(0, 0, 0,0.5);
+        transform: translateY(2px);
+      }
+    }    
+    &.nav-neon {
+      background-color: black;
+      color: $color;
+      text-shadow: 0 0 5px $color, 0 0 10px $color;
+      border: 1px solid $color;
+      &:hover {
+        text-shadow: 0 0 10px cyan, 0 0 20px $color;
+      }
+    }
+    &.nav-invert {
+      background-color: rgb(255, 255, 255);
+      color: $color;
+      border: 1px solid $color;
+
+      &:hover {
+        background-color: $color;
+        color: white;
+      }
+    }
+  }
+}
+
+.nav-gradient {
+  background: linear-gradient(45deg, #c88091, #2bceff);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+.nav-neon {
+  background-color: black;
+  color: cyan;
+  text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+  border: 1px solid cyan;
+  
+  &:hover {
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  }
+}
+.nav-border-gradient {
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 1000px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav-border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background-color: black;
+  border-radius: 1000px;
+  z-index: -1;
+  color: white;
+}
+
+.nav-border-gradient::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  color: white;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+  z-index: -2;
+}
+
+.nav-border-gradient span {
+  position: relative;
+  z-index: 2;
 }

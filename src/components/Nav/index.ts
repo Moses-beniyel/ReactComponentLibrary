@@ -1,1 +1,2 @@
-export * from './Nav';
+import NavBarComponent from "./Nav";
+export default NavBarComponent;
