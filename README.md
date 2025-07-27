@@ -1,41 +1,29 @@
-# ⚛️ React Component Library
+# 🔘 Button Component – React Component Library
 
-A customizable and reusable React Component Library developed as part of my internship at **[Your Company Name]**. This library allows developers to apply utility class names (like in **Tailwind CSS** or **Bootstrap**) to modify component styles dynamically.
+This is a **custom `Button` component** developed as part of my internship contribution to a larger React Component Library. The component is designed to be **fully customizable via `className`**, similar to Tailwind CSS or Bootstrap styling conventions.
 
----
-
-## 📌 Project Highlights
-
-- ✅ Built using **React**
-- ✅ Supports **utility-first styling** through `className`
-- ✅ Modular and reusable components
-- ✅ Scalable architecture
-- ✅ Inspired by **Bootstrap** and **Tailwind CSS**
+> 🛠️ This repository only contains the `Button` component I personally built. Other components in the library were developed by other team members and are not included here.
 
 ---
 
-## 🚀 Demo
+## 📌 Features
 
-Check out the live demo: [Component Library Demo](https://your-demo-link.com)
+- ⚛️ Built using React
+- 🎨 Fully styleable using `className`
+- 🧩 Reusable and customizable
+- 🔁 Supports variants, hover, and responsive utility classes
 
 ---
 
-## 📦 Installation
+## 🧑‍💻 Example Usage
 
-```bash
-npm install your-component-library
-# or
-yarn add your-component-library
+```jsx
+import Button from './components/Button';
 
-📁 Components
-🔹 Button
-
-🔹 Card
-
-🔹 Modal
-
-🔹 Input
-
-🔹 Badge
-
-🔹 Navbar
+function App() {
+  return (
+    <Button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+      Click Me
+    </Button>
+  );
+}
