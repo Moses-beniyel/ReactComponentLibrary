@@ -28,4 +28,4 @@ function App() {
   );
 }
 ```
-demoLink:https://react-component-library-six.vercel.app/button
+demoLink:https://react-component-library-six.vercel.app
