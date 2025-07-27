@@ -1,17 +1,21 @@
 import React, { CSSProperties } from "react";
 import "./Button.scss";
 
-// ✅ Define props type
 interface ButtonProps {
   className?: string;
   type?: "button" | "submit" | "reset";
   style?: CSSProperties;
-  hoverStyle?: CSSProperties; // You can ignore this if unused
-  children: React.ReactNode;  // ✅ Required for button content
+  hoverStyle?: string; // or remove this if not used
+  children?: React.ReactNode;
 }
 
-// ✅ Use props in the component
-const Button: React.FC<ButtonProps> = ({ className = "", type = "button", style = {}, hoverStyle, children }) => {
+const Button: React.FC<ButtonProps> = ({
+  className = "",
+  type = "button",
+  style = {},
+  hoverStyle = "",
+  children = "Button",
+}) => {
   return (
     <button className={`btn ${className}`} type={type} style={style}>
       {children}
